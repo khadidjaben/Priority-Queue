@@ -1,5 +1,3 @@
-
-// the import statements section, all the methods we need from java packages 
 import java.util.ArrayList;
 
 // the class creation
@@ -14,7 +12,7 @@ public class PriorityQueue<integer> {
         this.heap = new ArrayList<>(initialCapacity);
     }
 
-    // the methods implemented for the priority queue made of a power of two max heap
+    // the methods
 
     public void insert(Integer value) {
 
@@ -27,7 +25,7 @@ public class PriorityQueue<integer> {
             swap(index, parent(index));
             index = parent(index);
         }
-        heap.trimToSize();
+        heap.trimToSize(); // for efficient memory usage
     }
 
     public int popMax() {
@@ -58,7 +56,7 @@ public class PriorityQueue<integer> {
     }
 
     private int parent(int index) {
-        return (index - 1) / children;
+        return (index - 1) / children; // the calculation of the parent index
     }
 
     private void swap(int i, int j) {
